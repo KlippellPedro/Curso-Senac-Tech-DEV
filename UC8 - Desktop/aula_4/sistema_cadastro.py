@@ -138,19 +138,28 @@ class Cadastro:
         """Posiciona o canvas e a barra de rolagem na janela"""
         canvas.pack(side="left", fill="both", expand=True)
         scrollbar.pack(side="right", fill="y")
-        
-        tk.Label(janela_resultado,text=f"Nome: {self.nome_valor}",font=("Arial",12),bg="#fdf5e6").pack(anchor="w",pady=5,padx=10)
-        tk.Label(janela_resultado,text=f"Sobrenome: {self.sobrenome_valor}",font=("Arial",12),bg="#fdf5e6").pack(anchor="w",pady=5,padx=10)
-        tk.Label(janela_resultado,text=f"Idade: {self.idade_valor}",font=("Arial",12),bg="#fdf5e6").pack(anchor="w",pady=5,padx=10)
-        tk.Label(janela_resultado,text=f"Endereço: {self.endereco_valor}",font=("Arial",12),bg="#fdf5e6").pack(anchor="w",pady=5,padx=10)
-        tk.Label(janela_resultado,text=f"Bairro: {self.bairro_valor}",font=("Arial",12),bg="#fdf5e6").pack(anchor="w",pady=5,padx=10)
-        tk.Label(janela_resultado,text=f"Cidade: {self.cidade_valor}",font=("Arial",12),bg="#fdf5e6").pack(anchor="w",pady=5,padx=10)
-        tk.Label(janela_resultado,text=f"UF: {self.uf_valor}",font=("Arial",12),bg="#fdf5e6").pack(anchor="w",pady=5,padx=10)
-        tk.Label(janela_resultado,text=f"Sexo: {self.sexo_valor}",font=("Arial",12),bg="#fdf5e6").pack(anchor="w",pady=5,padx=10)
-        tk.Label(janela_resultado,text=f"Telefone: {self.telefone_valor}",font=("Arial",12),bg="#fdf5e6").pack(anchor="w",pady=5,padx=10)
-        tk.Label(janela_resultado,text=f"Email: {self.email_valor}",font=("Arial",12),bg="#fdf5e6").pack(anchor="w",pady=5,padx=10)
-        tk.Label(janela_resultado,text=f"RG: {self.rg_valor}",font=("Arial",12),bg="#fdf5e6").pack(anchor="w",pady=5,padx=10)
-        tk.Label(janela_resultado,text=f"CPF: {self.cpf_valor}",font=("Arial",12),bg="#fdf5e6").pack(anchor="w",pady=5,padx=10)
+
+        """Função para criar fram de dado"""
+
+        def criar_frame_dado(texto):
+            """Criar um frame com borda sólida e padding interno"""
+            frame=tk.Frame(scroll_frame,bg="white",bd=1,relief="solid",padx=10,pady=5)
+            """Empacota o fmrae, fazendo preencher a largura horizontal"""
+            frame.pack(fill="x",pady=5,padx=20)
+            tk.Label(frame,text=texto,font=("Arial",12,"bold"),bg="white").pack(anchor="w")
+        """Exibe os dados em frame separados. Chama a função auxiliar para cada dado do cadastro, organizado-os em frames distintos"""
+        criar_frame_dado(f"Nome Completo: {self.nome_valor} {self.sobrenome_valor}")
+        criar_frame_dado(f"Idade: {self.idade_valor}")
+        criar_frame_dado(f"Endereço: {self.endereco_valor}, Bairro: {self.bairro_valor}, Cidade: {self.cidade_valor}, UF: {self.uf_valor}")
+        criar_frame_dado(f"Sexo: {self.sexo_valor}")
+        criar_frame_dado(f"Telefone: {self.telefone_valor}")
+        criar_frame_dado(f"Email: {self.email_valor}")
+        criar_frame_dado(f"RG: {self.rg_valor}")
+        criar_frame_dado(f"CPF: {self.cpf_valor}")
+
+        """Mantém a referência da imagem para não desaparecer. O python pode colocar no lixo e remover a imagem da memoria se não houver referência a ela. [
+        Ao atribuir a imagem a um atributo da janela, garantimos que ela permaneça na memória enquanto a janela estiver aberta."""
+        janela_resultado.logo_red=logo_red
 
 
 if __name__=="__main__":
