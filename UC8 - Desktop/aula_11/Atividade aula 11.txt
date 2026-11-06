@@ -1,0 +1,66 @@
+Desafio: Pizzaria Mais sabor – Sistema de Pedidos com Interface Gráfica
+Objetivo
+
+Desenvolver um sistema em Python com interface gráfica (Tkinter) que simule o funcionamento de uma pizzaria digital, permitindo ao cliente escolher sabores, tamanhos e bebidas, montar seu pedido e realizar o pagamento.
+O sistema deve seguir a estrutura modular do projeto exemplo “Mercado Organizações Tabajara”.
+
+
+Requisitos Funcionais
+
+1. Interface Gráfica (Tkinter)
+
+Deve conter um menu com os sabores e tamanhos de pizza disponíveis.
+
+Campos para o usuário informar código do produto e quantidade.
+
+Botões para adicionar ao pedido e finalizar compra.
+
+Ao finalizar, abrir uma janela para escolher a forma de pagamento.
+
+2. Modelos (Models)
+
+Pizza: representa uma pizza com nome, tamanho e preço.
+
+Bebida: representa uma bebida simples com nome e preço.
+
+Pedido: gerencia os itens adicionados (pizza e bebida), calcula o total e gera o resumo.
+
+Pagamento: aplica descontos ou acréscimos conforme a forma de pagamento (mesmo padrão do projeto do mercado).
+
+3. Controlador (Controller)
+
+Gerencia toda a lógica da interface (adição ao pedido, cálculo de total e fechamento).
+
+Exibe mensagens de erro e sucesso via messagebox.
+
+4. Formas de Pagamento
+
+Dinheiro/PIX – 13% de desconto
+
+Débito – 8% de desconto
+
+Crédito 1x – preço normal
+
+Crédito 2x – acréscimo 7%
+
+Crédito 3x – acréscimo 9%
+
+Crédito 4x – acréscimo 12%
+
+Sugestão de Sabores Iniciais
+Código	Sabor			Tamanho	Preço
+1	Mussarela		Média	R$ 35,00
+2	Calabresa		Média	R$ 37,00
+3	Portuguesa		Grande	R$ 45,00
+4	Frango c/ Catupiry	Grande	R$ 47,00
+5	Refrigerante Lata	—	R$ 6,00
+6	Água	—			R$ 4,00
+
+5 - Cada aluno deve escolher as formatações do sistema (imagem de plano de fundo, cor das páginas, tamanho das fontes, tamanho das telas e demais recursos.
+
+6 - O Sistema deve adicionar itens no carrinho, remover, escolher a forma de pagamento e finalizar
+
+Enviar projeto por e-mail
+mglmatiolla@senacrs.com.br
+Assunto: Atividade sorveteria UC desktop python
+Corpo do e-mail: Nome do aluno + projeto python

@@ -1,7 +1,7 @@
 import tkinter as tk
-from sorveteria_gui import Sorveteria
+from sorveteria_gui import SorveteriaGui
 
 if __name__ == "__main__":
     root = tk.Tk()
-    app = Sorveteria(root)
+    app = SorveteriaGui(root)
     root.mainloop()
